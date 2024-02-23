@@ -1,4 +1,4 @@
-##TaskManager Documentation
+## TaskManager Documentation
 Overview
 TaskManager is a tool that allows users to manage tasks and templates. It provides a command-line interface (CLI) for interacting with the TaskManager environment. Below are some key features:
 
