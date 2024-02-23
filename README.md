@@ -1,5 +1,5 @@
 ## TaskManager Documentation
-Overview
+## Overview
 TaskManager is a tool that allows users to manage tasks and templates. It provides a command-line interface (CLI) for interacting with the TaskManager environment. Below are some key features:
 
 Adding Tasks: You can upload tasks (in JSON format) to the TaskManager. These tasks are associated with specific projects, users, and templates.
@@ -9,10 +9,9 @@ Updating Templates: Existing templates can be updated using the CLI.
 Instructions for Running Locally
 To run TaskManager on your local machine, follow these steps:
 
-Clone the Repository:
+## Clone the Repository:
 Clone the TaskManager repository from GitHub using git clone.
 Install Dependencies:
-Ensure you have Python installed (version 3.6 or higher).
 Install any required dependencies by running pip install -r requirements.txt.
 Configuration:
 By default, TaskManager will be reachable at localhost:27016.
