@@ -1,4 +1,4 @@
-# תיעוד של מנהל משימות בזמן אמת
+# תיעוד של מנהל משימות בזמן אמת 🥇
 ## מבוא
 יישום זה הוא מנהל משימות בזמן אמת שמאפשר למשתמשים להוסיף ולמחוק משימות בזמן אמת באמצעות Socket.IO. הוא מורכב משרת Node.js וממשק HTML, CSS ו-JavaScript בצד הלקוח.
 
