@@ -1,24 +1,23 @@
-## TaskManager Documentation
-## Overview
-TaskManager is a tool that allows users to manage tasks and templates. It provides a command-line interface (CLI) for interacting with the TaskManager environment. Below are some key features:
+# תיעוד של מנהל משימות בזמן אמת
+## מבוא
+יישום זה הוא מנהל משימות בזמן אמת שמאפשר למשתמשים להוסיף ולמחוק משימות בזמן אמת באמצעות Socket.IO. הוא מורכב משרת Node.js וממשק HTML, CSS ו-JavaScript בצד הלקוח.
 
-Adding Tasks: You can upload tasks (in JSON format) to the TaskManager. These tasks are associated with specific projects, users, and templates.
-Adding Users: The CLI allows you to add new users to the TaskManager.
-Adding Templates: Templates define the structure of tasks. You can upload templates to the TaskManager.
-Updating Templates: Existing templates can be updated using the CLI.
-Instructions for Running Locally
-To run TaskManager on your local machine, follow these steps:
+## הרצת היישום מקומית
+כדי להריץ את היישום מקומית, עקוב אחר השלבים הבאים:
 
-## Clone the Repository:
-Clone the TaskManager repository from GitHub using git clone.
-Install Dependencies:
-Install any required dependencies by running pip install -r requirements.txt.
-Configuration:
-By default, TaskManager will be reachable at localhost:27016.
-The admin account has the username admin and password admin.
-Configuration can be done via environment variables (see the Configuration section in the documentation).
-Run the Application:
-Execute python app.py to start the TaskManager server.
-Access the web interface at http://localhost:27016.
-
-Remember to thoroughly review the codebase, address these vulnerabilities, and follow best practices for secure development. Happy coding! 🚀
+וודא שיש לך את Node.js מותקן על המחשב שלך.
+העתק את המאגר המקורי של הקוד.
+נווט אל תיקיית הפרויקט בטרמינל שלך.
+התקן את התלות על ידי הרצת npm install.
+הפעל את השרת על ידי הרצת node server.js.
+פתח דפדפן ונווט לכתובת http://localhost:27016.
+## הסבר על הקוד
+בצד השרת (server.js)
+השרת נוצר באמצעות Express.js עם שרת HTTP בסיסי.
+משתמש ב-Socket.IO כדי להקים חיבור WebSocket בין השרת והלקוחות לתקשורת בזמן אמת.
+משתמשים במערך tasks כדי לאחסן את רשימת המשימות.
+בצד הלקוח (index.html & client.js)
+קובץ ה-HTML מכיל את מבנה העמוד, כולל שדות קלט ורשימות משימות.
+ה-JavaScript בצד הלקוח (client.js) פועל עם השרת באמצעות Socket.IO לשליחה וקבלה של נתונים הקשורים למשימות.
+כאשר מוספה משימה חדשה, הלקוח שולח את טקסט המשימה לשרת, שמפרסם את העדכון לכל הלקוחות המחוברים.
+כאשר מוחקים משימה, הלקוח שולח את מזהה המשימה לשרת, שמסיר את המשימה מהרשימה ומעדכן את כל הלקוחות המחוברים.🚀
